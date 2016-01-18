@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To do Task App</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script src="lib/angular.min.js"></script>
+	<script src="lib/angular-resource.min.js"></script>
+	<script src="js/app.js"></script>
+</head>
+<body ng-app="userDataApp">
+	<div ng-controller="userDataController">
+		<input type="number" placeholder="Enter task Id" ng-model="id" name="id"/><br>
+		<input type="button" ng-disabled="!id" ng-click="getTaskData(id)" value=" Get Specific Task Data " /><br>
+		<input type="button" ng-click="getAllTasksData()" value=" Get All Tasks" />
+		
+		<div>
+			<div ng-show="id">
+				<p>{{task.taskName}}</p>
+			</div>
+			<div ng-hide="id">
+				<ul>
+					<li ng-repeat="task in tasks">{{task.taskName}}</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

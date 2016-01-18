@@ -1,0 +1,24 @@
+<div class="box">
+	<div class="bar bar-subheader"><h2 class="title">Introduction</h2></div>
+	<ion-content class="has-subheader has-footer">
+		<ion-list>
+			<ion-item class="item-divider">Design Considerations</ion-item>
+			<ion-item class="item-icon-right" ng-click="toggleGroup('separationOfConcerns')" ng-class="{active: isGroupShown('separationOfConcerns')}">Separation of concerns<i class="icon" ng-class="isGroupShown('separationOfConcerns') ? 'ion-ios-arrow-up' : 'ion-ios-arrow-down'"></i></ion-item>
+			<ion-item class="item-accordion item-text-wrap" ng-show="isGroupShown('separationOfConcerns')">
+				<p>AngularJS architecture is based on <b>micro-services</b> and a module(controller/service/filter/directive) or a function is defined to accomplish a very specific task.</p>
+				<p>So a controller scope contains only variables and functions specifically required for DOM manipulation.</p><p>If data is stored in a server, the correspoding AJAX request to fetch the required data is implemented as a service and the dependency injected into the required module</p>
+			</ion-item>
+			<ion-item class="item-icon-right" ng-click="toggleGroup('di')" ng-class="{active: isGroupShown('di')}">Dependency Injection<i class="icon" ng-class="isGroupShown('di') ? 'ion-ios-arrow-up' : 'ion-ios-arrow-down'"></i></ion-item>
+			<ion-item class="item-accordion item-text-wrap" ng-show="isGroupShown('di')">
+				<p>AngularJS <b>dependency injection</b> which is a direct result of its <b>micro-service architecture</b> is useful in isolating the specific piece of code under test by mocking the injected dependencies</p>
+				<p>This facilitates testing of a service</p>
+			</ion-item>		
+		</ion-list>
+		<ion-list>
+			<ion-item class="item-divider">Tools for Unit testing</ion-item>
+			<ion-item>Test runner - <dfn>Karma</dfn></ion-item>
+			<ion-item>Language - <dfn>Jasmine</dfn></ion-item>
+			<ion-item>Stub - <dfn>angular-mocks</dfn></ion-item>
+		</ion-list>
+	</ion-content>
+</div>

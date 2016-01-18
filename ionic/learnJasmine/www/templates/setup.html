@@ -1,0 +1,41 @@
+<div class="box">
+	<div class="bar bar-subheader"><h2 class="title">Setup</h2></div>
+	<ion-content class="has-subheader has-footer">
+		<ion-list>
+			<ion-item class="item-divider">Pre-requisites</ion-item>
+			<ion-item>Node JS
+			<p><code><a href="https://nodejs.org">https://nodejs.org</a></code></p></ion-item>
+			<ion-item>Karma CLI
+			<p><code>npm install -g karma-cli</code></p>
+			</ion-item>
+		</ion-list>
+		<ion-list class="card">
+			<ion-item class="item-divider">Setup for each Project</ion-item>
+			<ion-item class="item-text-wrap">These steps are required only once per project. The <dfn>package.json</dfn> shall contain the dependencies and an <code>npm&nbsp;install</code> is sufficient for an already setup project.</ion-item>
+			<ion-item class="item-icon-right" ng-click="toggleGroup('jasmineSetup')" ng-class="{active: isGroupShown('jasmineSetup')}">Jasmine<i class="icon" ng-class="isGroupShown('jasmineSetup') ? 'ion-ios-arrow-up' : 'ion-ios-arrow-down'"></i>
+			</ion-item>
+			<ion-item class="item-accordion item-text-wrap" ng-show="isGroupShown('jasmineSetup')">
+				<p><code>npm install jasmine --save-dev</code></p>
+			</ion-item>
+
+			<ion-item class="item-icon-right" ng-click="toggleGroup('karmaSetup')" ng-class="{active: isGroupShown('karmaSetup')}">Karma<i class="icon" ng-class="isGroupShown('karmaSetup') ? 'ion-ios-arrow-up' : 'ion-ios-arrow-down'"></i>
+			</ion-item>
+			<ion-item class="item-accordion item-text-wrap" ng-show="isGroupShown('karmaSetup')">
+				<p>Step 1: to install components, <code>npm install karma karma-jasmine --save-dev</code></p>
+				<p>Step 2: To configure runner, <code>karma init</code></p>
+				<p>Use default configuration for all options except <dfn>files</dfn>. This options specifies the files that karma needs to monitor and use. The paths for</p>
+					<p><i class="icon ion-ionic"></i> angular.js and any other angular modules</p>
+					<p><i class="icon ion-ionic"></i> angular-mocks.js, if needed</p>
+					<p><i class="icon ion-ionic"></i> all application specific JS files</p>
+					<p><i class="icon ion-ionic"></i> test spec files</p>
+				<p>are mentioned here.</p>
+				<p>Step 3: To run the tests, <code>karma start</code></p>
+			</ion-item>
+			
+			<ion-item  class="item-icon-right" ng-click="toggleGroup('mocksSetup')" ng-class="{active: isGroupShown('mocksSetup')}">angular-mocks<i class="icon" ng-class="isGroupShown('mocksSetup') ? 'ion-ios-arrow-up' : 'ion-ios-arrow-down'"></i></ion-item>
+			<ion-item class="item-accordion item-text-wrap" ng-show="isGroupShown('mocksSetup')">
+				<p><code>npm install angular-mocks</code></p>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</div>

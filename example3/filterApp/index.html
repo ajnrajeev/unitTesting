@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Filter App</title>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script src="lib/angular.min.js"></script>
+	<script src="js/app.js"></script>
+</head>
+<body ng-app="filterApp">
+	<div ng-controller="filterController">
+	<div>
+		<input type="text" placeholder="Enter text to be starred" ng-model="val" name="val"/><br>
+
+		<output ng-if="val">{{val | starred}}</output>
+	</div>
+	<div>
+		<input type="text" placeholder="Enter user id" ng-model="id" name="id" ng-pattern=/^[a-zA-Z]+.[a-zA-Z]+$/><br>
+		<output ng-if="id">Random e-Mail is {{id | eMail}}</output>
+	</div>
+	</div>
+
+</body>
+</html>

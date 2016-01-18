@@ -1,0 +1,25 @@
+<div class="box">
+	<div class="bar bar-subheader"><h2 class="title">Jasmine Basics</h2></div>
+	<ion-content class="has-subheader has-footer">
+		<ion-list>
+			<ion-item class="item-divider">Test Suite</ion-item>
+			<ion-item class="item-text-wrap">Test suites in Jasmine are defined using <em><b>describe</b></em><pre><code>describe("Test something", function(){})</code></pre> </ion-item>
+			<ion-item class="item-divider">Test Spec</ion-item>
+			<ion-item class="item-text-wrap">Test specs start with <em><b>it</b></em>.<pre><code>it("should test something and output this", function(){})</code></pre></ion-item>
+			<ion-item class="item-divider">Expectations</ion-item>
+			<ion-item class="item-text-wrap">Expectations are set and matched with the required result to define PASS/FAIL. This is done using <em><b>expect</b></em>. The matchers can be for a positive result or a negative result, as follows.
+			<p><pre><code>expect(expression).toBe(expectedResult)</code></pre></p>
+			<p><pre><code>expect(expression).not.toBe(notExpectedExpressions)</code></pre></p></ion-item>
+			<ion-item class="item-divider">Disabling suites</ion-item>
+			<ion-item class="item-text-wrap">This is achieved by pre-fixing the suite with an <dfn>x</dfn>. So any spec defined as <code>xdescribe</code> is not taken up for execution.</ion-item>
+			<ion-item class="item-divider">Disabling Specs</ion-item>
+			<ion-item class="item-text-wrap">Test specs can be disabled by
+				<div><i class="icon ion-ionic"></i> prefixing the definition with an <dfn>x</dfn>,</div>
+				<div><i class="icon ion-ionic"></i> defining the spec with no function argument, or</div>
+				<div><i class="icon ion-ionic"></i> calling <code>pending(reasonString)</code> within the spec.</div>
+			</ion-item>
+			<ion-item class="item-divider">Spies</ion-item>
+			<ion-item class="item-text-wrap">Spies are used to mock any custom services.</ion-item>
+		</ion-list>
+	</ion-content>
+</div>
